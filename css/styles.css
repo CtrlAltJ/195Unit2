@@ -1,0 +1,343 @@
+/*
+ *  Jared Schroeder
+ *  styles.css
+ *  10/20/24
+ *
+ */
+ 
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*Styles for Body Content*/
+body {
+  background-color: #4e5a65;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+}
+
+
+/* Style Rules for Mobile Viewport */
+
+/* Hide tab-desk */
+.tab-desk {
+  display: none;
+}
+
+/*header*/
+header {
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(0,0,0,0.6);
+  padding: 1%;
+}
+
+header h1 {
+  font-family: "Agdasima", sans-serif;
+  font-style: normal;
+  font-size: 4em;
+  text-shadow: 4px 4px 10px rgba(247,206,82,0.8);
+}
+
+header h3 {
+  font-family: "Agdasima", sans-serif;
+  font-size: 1.8em;
+  font-style: normal;
+}
+
+/*nav*/
+nav {
+  background-color: rgba(0,0,0,0.6);
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav li {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  border: 1px solid black;
+  border-radius: 1px;
+}
+
+nav li a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5%;
+}
+
+/*main*/
+main {
+  height: 100%;
+  min-height: 100%;
+  padding: 2%;
+  background-color: #4e5a65;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+}
+
+.title img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  box-shadow: 4px 4px 10px rgba(247,206,82,0.6);
+}
+
+#intro p {
+  color: #ffffff;
+  text-align: center;
+}
+
+#intro p:last-child {
+  font-size: 1.15em;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(247,206,82,0.6);
+}
+
+figure {
+  border: solid;
+  border-radius: 6px;
+  border-color: #000000;
+  border-width: 1px;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+figure img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+figcaption {
+  color: #ffffff;
+  font-family: "Ubuntu", serif;
+  text-align: center;
+  font-style: italic;
+}
+
+section h1 {
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(247,206,82,0.6);
+  font-weight: bold;
+  font-family: "Agdasima", sans-serif;
+  text-align: center;
+}
+
+section p {
+  color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
+}
+
+section {
+  margin-bottom: 2%;
+}
+
+article {
+  margin-bottom: 2%;
+}
+
+main h1 {
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(247,206,82,0.6);
+  font-weight: bold;
+  font-family: "Agdasima", sans-serif;
+  text-align: center;
+}
+
+article img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+article p {
+  color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#desc h1 {
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(247,206,82,0.6);
+  font-weight: bold;
+  font-family: "Agdasima", sans-serif;
+  text-align: center;
+}
+
+#desc p {
+  color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+}
+
+#desc img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 2% 0;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 500px), print {
+  /* Show tab-desk, hide mobile */
+  .tab-desk {
+    display: block;
+  }
+  
+  .mobile {
+    display: none;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+  
+  .grid figure:nth-last-of-type(1) {
+    grid-column: span 2;
+  }
+  
+  .title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  #intro {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  figure, section {
+    margin-bottom: 0;
+  }
+  
+  article {
+    width: 45%;
+    float: left;
+    height: 100%;
+    min-height: 100%;
+    text-align: center;
+    padding: 2.5%;
+    margin-bottom: 0;
+  }
+  
+  #desc img {
+    float: left;
+    width: 40%;
+    margin: 1% 5%;
+  }
+  
+  main {
+    overflow: auto;
+  }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1000px), print {
+  /* Show tab-desk, hide mobile */
+  .tab-desk {
+    display: block;
+  }
+  
+  .mobile {
+    display: none;
+  }
+  
+  nav li {
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+  }
+  
+  nav li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.5em;
+    text-decoration: none;
+  }
+  
+  nav li a:link {
+    color: #ffffff;
+  }
+  
+  nav li a:visited {
+    color: #ffffff;
+  }
+  
+  nav li a:hover {
+    color: rgba(247,206,82,0.7);
+  }
+  
+  nav li a:active {
+    color: rgba(255,214,82,1);
+  }
+  
+  body {
+    background-image: linear-gradient(to right, #000000, #4e5a65, #708090);
+    background-color: #4e5a65;
+    background-repeat: no-repeat;
+  }
+  
+  main {
+    overflow: auto;
+    background-color: rgba(78,90,101,0.4);
+  }
+}
+
+/* Media Query for Large Desktop Viewport */
+@media screen and (min-width: 1921px) {
+  #container {
+    width: 1920px;
+    margin: 0 auto;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+  }
+  
+  .grid figure:nth-last-of-type(1) {
+    grid-column: auto;
+  }
+  
+  .title {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  
+  #intro {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
+
+/* Media Query for Print */
+@media print {
+  
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
